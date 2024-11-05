@@ -29,80 +29,9 @@ Implementar una clase `OrderFacade` que integre estos subsistemas y proporcione 
 
 **Paso 1:** Implementar las clases del subsistema.
 
-```java
-class Inventory {
-    public boolean checkProductAvailability(String productId) {
-        System.out.println("Checking availability for product ID: " + productId);
-        return true; // Supongamos que el producto está disponible
-    }
-}
-
-class Payment {
-    public void processPayment(String customerId, double amount) {
-        System.out.println("Processing payment for customer ID: " + customerId + " with amount: $" + amount);
-        // Lógica de procesamiento de pago
-    }
-}
-
-class Shipping {
-    public void arrangeShipping(String productId, String customerId) {
-        System.out.println("Arranging shipping for product ID: " + productId + " to customer ID: " + customerId);
-    }
-}
-
-class Notification {
-    public void sendOrderConfirmation(String customerId) {
-        System.out.println("Sending order confirmation to customer ID: " + customerId);
-    }
-}
-```
-
 **Paso 2:** Implementar la clase `OrderFacade`.
 
-```java
-class OrderFacade {
-    private Inventory inventory;
-    private Payment payment;
-    private Shipping shipping;
-    private Notification notification;
-
-    public OrderFacade() {
-        this.inventory = new Inventory();
-        this.payment = new Payment();
-        this.shipping = new Shipping();
-        this.notification = new Notification();
-    }
-
-    public void placeOrder(String productId, String customerId, double amount) {
-        if (inventory.checkProductAvailability(productId)) {
-            payment.processPayment(customerId, amount);
-            shipping.arrangeShipping(productId, customerId);
-            notification.sendOrderConfirmation(customerId);
-            System.out.println("Order placed successfully!");
-        } else {
-            System.out.println("Product not available for product ID: " + productId);
-        }
-    }
-}
-```
-
 **Paso 3:** Crear la clase `Main` para que el cliente pueda interactuar con el sistema a través de la clase `OrderFacade`.
-
-```java
-public class Main {
-    public static void main(String[] args) {
-        OrderFacade orderFacade = new OrderFacade();
-        
-        // Datos de ejemplo
-        String productId = "P12345";
-        String customerId = "C67890";
-        double amount = 100.0;
-
-        // Realizar un pedido
-        orderFacade.placeOrder(productId, customerId, amount);
-    }
-}
-```
 
 ### Requisitos del Ejercicio
 
