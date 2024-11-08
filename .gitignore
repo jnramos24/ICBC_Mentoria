@@ -1,0 +1,85 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Maven
+log/
+target/
+!src/main/resources/
+!src/test/resources/
+release-notes/
+*.iml
+*.ipr
+*.iws
+.idea/
+.mvn/
+
+# Gradle
+.gradle/
+build/
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code
+.vscode/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Linux
+*~
+
+# Temporary files
+*.swp
+*.swo
+
+# Generated files
+*.generated
+
+# Logs
+*.log
+
+# Environment properties
+.env
+
+# Local build artifacts
+bin/
+build/
+
+# Coverage reports
+coverage/
+
+# Backup files
+*.bak
+
+# Temporary files created by editors
+*.~
+
