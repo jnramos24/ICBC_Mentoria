@@ -1,7 +1,3 @@
-¡Por supuesto! Aquí tienes un ejercicio práctico para aplicar el principio OCP en Java:
-
-### Ejercicio
-
 Imagina que tienes una aplicación que gestiona diferentes tipos de notificaciones. Actualmente, solo puedes enviar notificaciones por **correo electrónico**. Tu objetivo es mejorar la aplicación para permitir el envío de notificaciones mediante otros medios, como **SMS** o **notificaciones push**, sin modificar el código de la clase que administra las notificaciones.
 
 ### Requerimientos
