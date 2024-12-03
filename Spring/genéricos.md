@@ -1,6 +1,3 @@
-A continuación, te proporciono un ejemplo real de un proyecto de Spring que utiliza genéricos para implementar un servicio base genérico que puede ser reutilizado por múltiples entidades. Esto mejora la mantenibilidad del código al evitar duplicar lógica para cada entidad.
-
-## Contexto
 Supongamos que tienes varias entidades en tu aplicación, como `Usuario` y `Producto`. Necesitas implementar operaciones CRUD para cada entidad y deseas evitar la duplicación de código.
 
 ### Código del Proyecto
