@@ -21,6 +21,8 @@ public class UserDTO {
     @Min(value = 18, message = "La edad debe ser mayor o igual a 18 años")
     private Integer age;
 
-    @Size(min = 8, max = 16, message = "La contraseña que elijas debe tener entre 8 y 16 caracteres")
+    @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]).{8,}$",
+            message = "LLa contraseña que elijas debe tener entre 8 y 16 caracteres, una letra mayúscula, una letra minúscula, un número y un carácter especial.")
+    //@Size(min = 8, max = 16, message = "La contraseña que elijas debe tener entre 8 y 16 caracteres")
     private String password;
 }
