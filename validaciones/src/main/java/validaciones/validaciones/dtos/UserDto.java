@@ -3,10 +3,10 @@ package validaciones.validaciones.dtos;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import validaciones.validaciones.util.StrongPass;
 
 @AllArgsConstructor
 @Data
@@ -24,8 +24,8 @@ public class UserDto {
     @Email(message = "El correo debe ser válido")
     private String email;
 
-    @Pattern(regexp = "^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[!@#$%^&*()_+\\-=\\[\\]{};':\"\\\\|,.<>\\/?]).{8,}$",
-            message = "La contraseña debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula, un número y un carácter especial.")
+    @StrongPass(message = "La contraseña debe tener al menos 8 caracteres, una mayúscula, un número y un carácter especial")
+
     private String password;
 
 }
