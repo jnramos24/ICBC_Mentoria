@@ -13,16 +13,19 @@ import java.util.List;
 public class UserController {
 
     private final List<UserDTO> userDTOList = new ArrayList<>();
+
     @PostMapping
-    public String create (@Valid @RequestBody UserDTO user){
+    public String userCreate (@Valid @RequestBody UserDTO user){
+        userDTOList.add(user);
+
         return "Se creo el usuario " + user.getName();
     }
 
-
     @GetMapping
-    public ResponseEntity<List<UserDTO>> userDTOList() {
-        return ResponseEntity.ok(userDTOList);
+    public List<UserDTO> getUserDTOList() {
+        return userDTOList;
     }
+
 }
 
 
