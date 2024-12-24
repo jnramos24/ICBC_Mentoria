@@ -2,7 +2,6 @@ package com.example.resoluciones_mentoria.controller;
 
 import com.example.resoluciones_mentoria.dto.UserDTO;
 import jakarta.validation.Valid;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;

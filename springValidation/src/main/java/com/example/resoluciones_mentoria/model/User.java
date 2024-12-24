@@ -1,6 +1,4 @@
 package com.example.resoluciones_mentoria.model;
-
-import jakarta.validation.constraints.*;
 import lombok.Getter;
 import lombok.Setter;
 
