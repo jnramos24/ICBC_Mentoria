@@ -76,7 +76,7 @@ abstract class Message {
         this.channel = channel;
     }
 
-    abstract void sendMessage();
+    abstract void sendMessage(String msg);
 }
 ```
 
@@ -110,12 +110,12 @@ public class NotificationSystemDemo {
 
         // Crear un mensaje de alerta crítica y enviarlo por correo electrónico
         Message criticalAlert = new CriticalAlertMessage(emailChannel);
-        criticalAlert.sendMessage();
+        criticalAlert.sendMessage("¡Problema en el sistema!");
 
         // Crear un mensaje de promoción y enviarlo por SMS
         NotificationChannel smsChannel = new SmsChannel();
         Message promotion = new PromotionMessage(smsChannel);
-        promotion.sendMessage();
+        promotion.sendMessage("20% de descuento en tu próxima compra.");
     }
 }
 ```
