@@ -9,7 +9,7 @@ public class ReminderMessage extends Message {
 
     @Override
     public void sendMessage(String msg) {
-        notificationChannel.send("");
-        System.out.println("Recordatorio: " + msg);
+        String content = "Recordatorio: ";
+        notificationChannel.send(content + msg);
     }
 }

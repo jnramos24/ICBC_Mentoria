@@ -10,8 +10,8 @@ public class SatisfactionQuiz extends Message {
 
     @Override
     public void sendMessage(String msg) {
-        notificationChannel.send("");
-        System.out.println("Encuesta de satisfaccion: " + msg);
+        String content = "Encuesta de satisfaccion: ";
+        notificationChannel.send(content + msg);
 
     }
 }

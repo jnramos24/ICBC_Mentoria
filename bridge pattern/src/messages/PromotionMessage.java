@@ -9,7 +9,7 @@ public class PromotionMessage extends Message {
 
     @Override
     public void sendMessage(String msg) {
-        notificationChannel.send("");
-        System.out.println("Promocion: " + msg);
+        String content = "Promocion: ";
+        notificationChannel.send(content + msg);
     }
 }
