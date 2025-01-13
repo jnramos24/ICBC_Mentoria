@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
 public class Main {
     public static void main(String[] args) {
 
@@ -9,45 +8,60 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
-        //n = numero de datos a ingresar
-        System.out.println("Cantidad de datos a ingresar: ");
+        String INSERT = "Insert";
+        String DELETE = "Delete";
+
+        System.out.println("cant de datos");
         int n = in.nextInt();
+        in.nextLine();
 
         //ingreso de datos
         for(int i=0 ; i<n ; i++){
+
+            System.out.println("Dato a ingresar");
             int dato = in.nextInt();
             lista.add(dato);
         }
-        System.out.println("Lista original: " + lista);
-        in.nextLine();
 
         //Insert o delete
-        System.out.println("(i)Insert or (d)Delete?");
-        String s = in.nextLine();
+        //nro de operaciones
+        System.out.println("Cant de operaciones");
+        int q = in.nextInt();
+        in.nextLine();
 
-        if(s.equals("i")) {
-            System.out.println("Ingrese indice: ");
-            int index = in.nextInt();
+        for(int i=0 ; i<q ; i++) {
+            //tipo de operacion
+            System.out.println("Tipo de operacion: Insert o Delete");
+            String s = in.nextLine();
 
-            System.out.println("Ingrese numero a agregar: ");
-            int numero = in.nextInt();
+            if(INSERT.equals(s)) {
+                System.out.println("Indice: ");
+                int index = in.nextInt();
+                System.out.println("Numero a agregar: ");
+                int numero = in.nextInt();
+                in.nextLine();
 
-            //agregar a la lista lo ingresado por el usuario
-            lista.add(index, numero);
-            System.out.println(lista);
+                //agregar a la lista lo ingresado por el usuario
+                lista.add(index, numero);
+                System.out.println("Lista actualizada: " + lista); //arreglar mostrar solo valores
 
-        } else if (s.equals("d")) {
-            System.out.println("Ingrese indice a borrar: ");
-            int index = in.nextInt();
+            } else if(DELETE.equals(s)) {
+                System.out.println("Indice a borrar: ");
+                int index = in.nextInt();
 
-            //borro el indice ingresado
-            lista.remove(index);
-            System.out.println("Lista despues de eliminar: " + lista);
-            in.nextLine();
-        } else {
-            System.out.println("valor invalido");
+                //borro el indice ingresado
+                lista.remove(index);
+                in.nextLine();
+
+            } else {
+                System.out.println("valor invalido");
+                i--;
+            }
         }
+        in.close();
 
-        System.out.println("Lista final" + lista);
+        for(int i=0 ; i<lista.size() ; i++){
+            System.out.print(lista.get(i) + " ");
+        }
     }
 }
